@@ -1,5 +1,14 @@
 import React from 'react';
+import CardList from './CardList';
+import NavBarMenu from './NavBar';
+import Carousel from './Carousel';
 
-const Home = () => (<h1>test</h1>);
+const Home = () => (
+  <div>
+    <NavBarMenu />
+    <Carousel />
+    <CardList />
+  </div>
+);
 
 export default Home;
