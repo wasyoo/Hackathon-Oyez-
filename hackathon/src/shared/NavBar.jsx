@@ -25,7 +25,7 @@ const NavBarMenu = () => (
             <i className="fas fa-user" />
           </a>
           <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a className="dropdown-item" href="/">Inscription</a>
+            <a className="dropdown-item" href="#" data-toggle="modal" data-target="#register">Inscription</a>
             <a className="dropdown-item" href="/">Connexion</a>
           </div>
         </li>

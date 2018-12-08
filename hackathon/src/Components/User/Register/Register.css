@@ -1,0 +1,158 @@
+/*.Registerform, .loginForm{
+  display: flex;
+  margin: 2%;
+}
+.header{
+  flex-basis: 20%;
+  background-color: rgba(100, 100 , 100, .8);
+  border-radius: 5px;
+  margin-left: 2%;
+  text-align: center;
+}
+.loginForm{
+  display: flex; flex-direction: column; justify-content: center;
+}
+.subForm{
+  flex-basis: 50%; 
+}
+.formGroup{
+  display: flex; 
+  margin-bottom: 2%;
+}
+.formGroup label{
+  flex-basis: 25%; align-self: center;
+}
+.formGroup input{
+  flex-basis: 70%;
+  border-radius: 5px;
+  height: 35px; border-bottom: 1px solid grey;
+}
+.buttons{
+  text-align: right;
+  margin: 2%;
+  
+}
+.buttons button{
+  padding: 2% 4%;
+  border-radius: 5px;
+  border: solid;  
+  margin-right: 2%;
+}
+.buttons button:hover{
+  background-color: green;
+  transition-duration: .3s;
+}*/
+
+
+
+
+
+
+.Registerform, .loginForm {
+  padding-top: 2%;
+  display: flex;
+  /*height: 320px;*/
+  margin: 0 auto;
+  width: 640px;
+}
+@media (max-width: 767px) {
+  .Registerform, .loginForm {
+    flex-direction: column;
+    width: 320px;
+  }
+}
+.header {
+  height: calc(100% - 40px);
+  top: 20px;
+  position: relative;
+  flex-basis: 55%;
+}
+@media (max-width: 767px) {
+  .header {
+    height: 100%;
+    left: 20px;
+    width: calc(100% - 40px);
+    max-height: 270px;
+  }
+}
+.header h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+/*.eula {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 40px;
+}*/
+.subForm {
+  box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.22);
+  color: #F1F1F2;
+  position: relative;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .subForm {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 350px;
+  }
+}
+/*svg {
+  position: absolute;
+  width: 320px;
+}
+path {
+  fill: none;
+  stroke: url(#linearGradient);;
+  stroke-width: 4;
+  stroke-dasharray: 240 1386;
+}*/
+.form {
+  margin: 40px;
+  position: absolute;
+}
+label {
+  display: block;
+  font-size: 20px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: blue;
+  margin-left: 2%;
+}
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid grey;
+  color: #f2f2f2;
+  font-size: 22px;
+  height: 30px;
+  line-height: 30px;
+  outline: none !important;
+  width: 100%;
+}
+input:focus { 
+  border-bottom: 2px solid blue;
+  transition-duration: .3s
+}
+.buttons{
+  text-align: right;
+  margin: 2%;
+  
+}
+.buttons button{
+  padding: 2% 4%;
+  border-radius: 5px;
+  border: solid;  
+  margin-right: 2%;
+}
+#submit:hover{
+  background-color: green;
+  transition-duration: .3s;
+}
+#cancel:hover{
+  background-color: red;
+  transition-duration: .3s;
+}
