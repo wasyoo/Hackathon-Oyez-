@@ -6,9 +6,9 @@ import Login from './compenents/Login/Login';
 
 const App = () => (
   <div className="App">
-    {/* <Home /> */}
-    <Register/> 
-     {/* <Login/>  */}
+     <Home /> 
+     {/* <Register/> 
+     <Login/> */}
   </div>
 );
 
