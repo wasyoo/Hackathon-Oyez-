@@ -1,0 +1,96 @@
+.UserDetails{ padding: 10%  5%;}
+.container.portfolio{ width:80%; height: 500px;
+ text-align: center;}
+
+.portfolio{
+    padding:6%;
+    text-align:center;
+}
+.heading{
+    background: #fff;
+    padding: 1%;
+    text-align: left;
+    box-shadow: 0px 0px 4px 0px #545b62;
+  text-align: right;
+}
+.heading img{
+    width: 5%;
+    height: 30px;
+}
+.bio-info{
+    padding: 5%;
+    background:#fff;
+    box-shadow: 0px 0px 4px 0px #b0b3b7;
+    text-align: center;
+  margin-bottom: 4%;
+}
+.name{
+    font-family: 'Charmonman', cursive;
+    font-weight:600;
+}
+.bio-image{
+    text-align:center;
+    display: flex;
+}
+.bio-image img{
+    border-radius:50%;
+    width: 250px; height: 250px;
+    border: 2px solid black;
+}
+.bio-content{
+    text-align:left;
+}
+.bio-content p{
+    font-weight:600;
+    font-size:30px;
+}
+.title {
+    padding: 7% 0%;
+    display: block;
+    margin: 8px 14px 0 14px;
+    overflow: hidden;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #404040;
+}
+.bottom{ display: flex; justify-content: space-around; width: 60%; }
+.bottom .btn{    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 15px; }
+    .btn.btn-sm .fa {
+        font-size: 20px; text-align: center !important;     padding-top: 23%; padding-left:2%; }
+  .cardlistdetails{display: flex; }
+  .stars-style {
+    color: #ababab;
+    cursor: pointer;
+    font-size: 22px;
+  }
+  
+  .fill {
+    color: #ffd700;
+    cursor: pointer;
+    font-size: 22px;
+  }
+  .details{ margin-left: 2%;}
+  .label{ text-decoration: underline;}
+  .label-details{ display: flex; width: 100%; font-weight: 600;  }
+  .plats-user{ background-color: rgb(0,0,0,0.5);
+    font-size: 16px;
+    color: white;
+    line-height: 26px;
+    padding: 2% 5%;
+margin:5% 0%;
+border: 2px solid black  }  
+.ligne1 {
+    content: ' ';
+    display: block;
+    background: #47a0ff;
+    height: 145px;
+    width: 5px;
+    margin-top: 15%;
+    margin-left: 21%;
+}
+.rating{padding: 7% 0% ;   
+}

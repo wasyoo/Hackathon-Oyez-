@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
-import UserDetails from './Components/UserDetails';
+import UserDetails from './Components/UserDetails/UserDetails';
 import NavBar from './shared/NavBar';
 import Footer from './shared/Footer';
 
