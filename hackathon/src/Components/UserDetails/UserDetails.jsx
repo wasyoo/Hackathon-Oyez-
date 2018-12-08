@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './UserDetails.css';
-import NavBar from '../NavBar';
-import CardItem from '../CardItem';
+import CardItem from '../Home/CardItem';
 import StarsRating from './Raiting';
 
 class UserDetails extends Component {
@@ -13,7 +12,6 @@ class UserDetails extends Component {
   render() {
     return (
       <div className="UserDetails">
-        <NavBar />
         <div className="container portfolio">
           <div className="bio-info">
             <div className="row">
