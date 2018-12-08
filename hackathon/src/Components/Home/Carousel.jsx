@@ -9,7 +9,7 @@ const Carousel = () => (
     </ol>
     <div className="carousel-inner">
       <div className="carousel-item active">
-        <img className="d-block w-100" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="First slide" />
+        <img className="d-block w-100" src="https://www.cpacanada.ca/-/media/cpa-digital-hub/featured-images/2018/05/hub-05-25-cookingapp-hero-700x525.jpg" alt="First slide" />
       </div>
       <div className="carousel-item">
         <img className="d-block w-100" src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Second slide" />
