@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './UserDetails.css';
-import logo from './logo1.png';
+import CardItem from '../Home/CardItem';
+import StarsRating from './Raiting';
 
 class UserDetails extends Component {
   constructor(props) {
@@ -12,20 +13,14 @@ class UserDetails extends Component {
     return (
       <div className="UserDetails">
         <div className="container portfolio">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="heading">
-                <p>User Details</p>
-              </div>
-            </div>
-          </div>
           <div className="bio-info">
             <div className="row">
               <div className="col-md-6">
                 <div className="row">
                   <div className="col-md-12">
                     <div className="bio-image">
-                      <img src={logo} alt="img" />
+                      <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="img" />
+                      <div className="ligne1" />
                     </div>
                   </div>
                 </div>
@@ -34,9 +29,21 @@ class UserDetails extends Component {
                 <div className="title">
                   <a href="https://google.com/">Foulen Ben Foulen</a>
                 </div>
-                <div className="label">Phone:+216 50 789 988</div>
-                <div className="label">Email:Foulen@gmail.com</div>
-                <div className="label">Company : Go My Code</div>
+                <div className="label-details">
+                  <div className="label">Téléphone :</div>
+                  <div className="details">  +216 50 789 988</div>
+                </div>
+                <br />
+                <div className="label-details">
+                  <div className="label">Email : </div>
+                  <div className="details">  Foulen@gmail.com</div>
+                </div>
+                <br />
+                <div className="label-details">
+                  <div className="label">Entreprise : </div>
+                  <div className="details">  Go My Code</div>
+                </div>
+                <br />
                 <div className="bottom">
                   <a className="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/">
                     <i className="fa fa-twitter" />
@@ -48,12 +55,22 @@ class UserDetails extends Component {
                     <i className="fa fa-facebook" />
                   </a>
                 </div>
-
+                <div className="rating"><StarsRating /></div>
               </div>
             </div>
           </div>
         </div>
-
+        <div className="plats-user">
+          <i className="fas fa-angle-double-right" />
+          {'Les Plats Disponibles'}
+        </div>
+        <div className="cardlistdetails">
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          {/* <CardList style={{ width: '50%' }} /> */}
+        </div>
       </div>
 
 

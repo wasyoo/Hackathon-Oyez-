@@ -4,7 +4,9 @@ import CardItem from './CardItem';
 
 const CardList = () => (
   <div className="home">
-    <div className="row">
+    <div className="card-list row">
+      <CardItem />
+      <CardItem />
       <CardItem />
     </div>
   </div>
