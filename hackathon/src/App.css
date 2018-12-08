@@ -1,5 +1,5 @@
 .App {
-  /* text-align: center; */
+ text-align: center; 
 }
 
 .App-logo {
@@ -29,4 +29,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+.card {
+  position: relative;
+}
+
+.card-user{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+  margin: 10px 0 0 10px;
+  border : 1px solid #000; 
+}
+.card-img-top{
+  width: 100%; 
+}
+
+.carousel-item {
+  height: 70vh;
+  width: 100vw;
+}
+
+.navbar{
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar-nav .nav-link{
+  color:#fff !important;
 }
