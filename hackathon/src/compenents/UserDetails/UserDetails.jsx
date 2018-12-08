@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './UserDetails.css';
-import NavBar from '../compenents/NavBar';
-import CardItem from '../compenents/CardItem';
+import NavBar from '../NavBar';
+import CardItem from '../CardItem';
 import StarsRating from './Raiting';
 
 class UserDetails extends Component {

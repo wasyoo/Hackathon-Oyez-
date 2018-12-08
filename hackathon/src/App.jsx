@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 // import Home from './compenents/Home';
-import UserDetails from './Components/UserDetails';
+import UserDetails from './compenents/UserDetails/UserDetails';
 
 const App = () => (
   <div className="App">
