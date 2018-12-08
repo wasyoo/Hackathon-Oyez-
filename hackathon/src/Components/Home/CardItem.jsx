@@ -8,9 +8,9 @@ const CardItem = () => (
       <div className="card-body">
         <h5 className="card-title border-bottom pb-3">Card title</h5>
         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the content.</p>
+        <strong>7 dt</strong>
         <a href="/test" className="float-right">
         Réserver
-          <i className="fas fa-angle-double-right" />
         </a>
       </div>
     </div>

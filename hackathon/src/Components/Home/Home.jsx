@@ -1,12 +1,12 @@
 import React from 'react';
 import CardList from './CardList';
-import NavBarMenu from './NavBar';
 import Carousel from './Carousel';
+import HowItWork from './HowItWork';
 
 const Home = () => (
   <div>
-    <NavBarMenu />
     <Carousel />
+    <HowItWork />
     <CardList />
   </div>
 );

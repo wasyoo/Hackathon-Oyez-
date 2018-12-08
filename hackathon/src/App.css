@@ -1,5 +1,5 @@
-.App {
- text-align: center; 
+*{
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -49,7 +49,7 @@
 }
 
 .carousel-item {
-  height: 70vh;
+  height: 80vh;
   width: 100vw;
 }
 
@@ -60,3 +60,52 @@
 .navbar-nav .nav-link{
   color:#fff !important;
 }
+
+.footer{
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
+.card-list{
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.navbar .navbar-brand{
+  color:#fff ;
+  font-size: 30px;
+}
+.navbar .navbar-brand :hover{
+  color:#fff !important;
+}
+
+.how-section h1{
+  text-align: center;
+}
+
+.how-it-work{
+  margin-top:30px;
+  justify-content: space-around;
+  align-items: center;
+  padding:20px;
+}
+
+.how-it-work img{
+  width: 200px;
+}
+
+.how-it-work img{
+  width: 200px;
+}
+
+.how-it-work i{
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+.how-it-work h3{
+  text-align: center;
+}
+
