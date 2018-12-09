@@ -1,34 +1,34 @@
-import React, { Component } from 'react';
-import { Button, Segment } from 'semantic-ui-react'
+import React from 'react';
+import './Login.css';
 
-class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {  }
-  }
-  render() { 
-    return ( 
-      <div className="loginForm">
-        <div className="header">
-          <h1>Existing user login</h1>
-        </div>
-        <div className="subForm">
-        <div className="formGroup">
-            <label>Email:</label>
-            <input className="Login" type='text' placeholder='Your email address'/>
-          </div>
-          <div className="formGroup">
-            <label>Password:</label>
-            <input className="Login" type='text' placeholder='Your password'/>
-          </div>
-          <div className='buttons'>
-          <Button inverted color='green'>Login</Button>
-          <Button inverted color='green'>Cancel</Button>
-        </div>
-        </div>
-      </div>
-     );
-  }
-}
+const Login = () => (
+<div className="login-section">
+<form class="login-form">
+<div className="form-group">
+  <label htmlFor="image">Email</label>
+  <input
+    type="email"
+    className="form-control"
+    id="email"
+    placeholder="veuillez entrer votre adresse mail"
+  />
+</div>
+
+<div className="form-group">
+  <label htmlFor="rating">Mot de passe</label>
+  <input
+    type="paasword"
+    className="form-control"
+    id="password"
+    placeholder="veuillez entrer votre mot de passe"
+  />
+</div>
+
+<button type="submit" className="btn btn-primary">
+Login
+</button>
+</form>
+</div>
+);
  
 export default Login;

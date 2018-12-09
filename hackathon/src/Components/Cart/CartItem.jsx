@@ -22,9 +22,9 @@ const CartItem = () => (
       <strong>10 DT</strong>
     </div>
     <div className="product_quantity col-lg-3">
-      <button className="btn btn-light increase_price">+</button>
+      <button className="btn btn-light increase_price" type="button">+</button>
       <span className="quantity">0</span>
-      <button className="btn btn-light decrease_price">-</button>
+      <button className="btn btn-light decrease_price" type="button">-</button>
     </div>
     <div className="product_price col-lg-2">
       <span data-price="150" className="price">0</span>
