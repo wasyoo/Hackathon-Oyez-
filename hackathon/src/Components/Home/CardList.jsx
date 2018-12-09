@@ -7,7 +7,8 @@ import CardItem from './CardItem';
 
 
 const CardList = (props) => (
-  <div className="home">
+  <div className="card-list">
+    <h1 className="title-section">Les derniers plats</h1>
     <div className="card-list row">
       { props.plat.map((el, index) =>
         // eslint-disable-next-line react/no-array-index-key
@@ -15,7 +16,6 @@ const CardList = (props) => (
       }
     </div>
   </div>
-
 );
 const mapStateToProps = (state) => ({
   plat: state
