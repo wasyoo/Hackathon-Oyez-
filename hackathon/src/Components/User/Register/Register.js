@@ -1,45 +1,62 @@
-import React ,{Component} from 'react';
-import { Button, Segment } from 'semantic-ui-react'
+import React , { Component } from 'react';
+import './Register.css';
 
-import './Register.css'
 class Register extends Component {
-  state = {  }
-  render() { 
-    return ( 
-      <div className="Registerform">
-        <div className='header'>
-          <h1>New user!</h1>
+  render() {
+    return (
+      <form>
+        <div className="form-group">
+          <label htmlFor="name">Nom prenom</label>
+          <input
+            type="text"
+            className="form-control"
+            id="name"
+            placeholder="veuillez entrer votre nom et prénom"
+          />
         </div>
-        <div className="subForm">
-          <div className="formGroup">
-            <label>Full name:</label>
-            <input type='text' placeholder='Your full name'/>
-          </div>
-          <div className="formGroup">
-            <label>Email:</label>
-            <input type='text' placeholder='Your email address'/>
-          </div>
-          <div className="formGroup">
-            <label>Phone:</label>
-            <input type='text' placeholder='Your phone number'/>
-          </div>
-          <div className="formGroup">
-            <label>Company:</label>
-            <input type='text' placeholder='Your company'/>
-          </div>
-          <div className="formGroup">
-            <label>Password:</label>
-            <input type='text' placeholder='Your password'/>
-          </div>
-          <div className='buttons'>
-            <button id="submit" type="button">Register</button>
-            <button id="cancel" type="button">Cancel</button>
-          </div>
+        <div className="form-group">
+          <label htmlFor="image">Email</label>
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            placeholder="veuillez entrer votre adresse mail"
+          />
         </div>
-        
-      </div>
-     );
+
+        <div className="form-group">
+          <label htmlFor="year">Tel</label>
+          <input
+            type="number"
+            className="form-control"
+            id="tel"
+            placeholder="veuillez entrer votre numero de téléphone"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="rating">Entreprise</label>
+          <input
+            type="text"
+            className="form-control"
+            id="company"
+            placeholder="veuillez entrer l'entreprise"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="rating">Password</label>
+          <input
+            type="paasword"
+            className="form-control"
+            id="password"
+            placeholder="veuillez entrer votre mot de passe"
+          />
+        </div>
+        <button type="submit" className="btn btn-primary">
+                    Submit
+        </button>
+      </form>
+    );
   }
 }
- 
+
 export default Register;
