@@ -19,7 +19,7 @@ class FormUser extends Component {
 
   state = {
     id: this.props.user.id || '',
-    username: this.props.user.username || '',
+    name: this.props.user.username || '',
     email: this.props.user.email || '',
     password: this.props.user.password || '',
     company: this.props.user.company || '',
@@ -36,7 +36,7 @@ class FormUser extends Component {
 
 
     const {
-      username, email, password, id, company,
+      name, email, password, id, company,
     } = this.state;
     return (
       <form
@@ -45,7 +45,7 @@ class FormUser extends Component {
           onSubmit({
             variables: {
               input: {
-                username,
+                name,
                 email,
                 password,
                 company,
@@ -81,16 +81,6 @@ class FormUser extends Component {
             value={email}
           />
         </div>
-
-        <div className="form-group">
-          <label htmlFor="year">Tel</label>
-          <input
-            type="number"
-            className="form-control"
-            id="tel"
-            placeholder="veuillez entrer votre numero de téléphone"
-          />
-        </div>
         <div className="form-group">
           <label htmlFor="rating">Entreprise</label>
           <input
@@ -105,7 +95,7 @@ class FormUser extends Component {
         <div className="form-group">
           <label htmlFor="rating">Password</label>
           <input
-            type="paasword"
+            type="password"
             className="form-control"
             name="password"
             placeholder="veuillez entrer votre mot de passe"

@@ -5,7 +5,7 @@ const repasSchema = new mongoose.Schema({
   qtt: Number,
   description: String,
   price: Number,
-  image: String
+  image: String,
 }, { timestamps: true });
 repasSchema.toJSON = function repas() {
   return {
