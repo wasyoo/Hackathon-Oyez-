@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import { Search, Grid, Header, Segment } from 'semantic-ui-react';
+import { withRouter } from 'react-router';
+import {
+  Search, Grid,
+} from 'semantic-ui-react';
 
 const source = [
   {
@@ -27,37 +30,42 @@ const source = [
 
 
 class AutoComplete extends Component {
-    componentWillMount() {
-      this.resetComponent()
-    }
-  
+  componentWillMount() {
+    this.resetComponent();
+  }
+
     resetComponent = () => this.setState({ isLoading: false, results: [], value: '' })
-  
-    handleResultSelect = (e, { result }) => this.setState({ value: result.title })
-  
+
+    handleResultSelect = (e, { result }) => {
+      this.setState({ value: result.title });
+      this.props.history.push('/platsdetails');
+    }
+
     handleSearchChange = (e, { value }) => {
-      this.setState({ isLoading: true, value })
-      
-  
+      this.setState({ isLoading: true, value });
+
+
       setTimeout(() => {
-        if (this.state.value.length < 1) return this.resetComponent()
-  
-        const re = new RegExp(_.escapeRegExp(this.state.value), 'i')
-        const isMatch = result => re.test(result.title)
-        
-  
+        if (this.state.value.length < 1) return this.resetComponent();
+
+        const re = new RegExp(_.escapeRegExp(this.state.value), 'i');
+        const isMatch = (result) => re.test(result.title);
+
+
         this.setState({
           isLoading: false,
           results: _.filter(source, isMatch),
-        })
-      }, 300)
+        });
+
+        return null;
+      }, 300);
     }
-  
+
     render() {
-      const { isLoading, value, results } = this.state
-  
+      const { isLoading, value, results } = this.state;
+
       return (
-        <Grid style={{marginTop:"200px"}}>
+        <Grid>
           <Grid.Column width={6}>
             <Search
               loading={isLoading}
@@ -69,8 +77,8 @@ class AutoComplete extends Component {
             />
           </Grid.Column>
         </Grid>
-      )
+      );
     }
-  }
+}
 
-export default AutoComplete;
+export default withRouter(AutoComplete);
