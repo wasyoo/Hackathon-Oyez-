@@ -1,13 +1,18 @@
 
 /*****************globals*************/
+.wrapper.row{ display: flex;}
+.add-to-cart.btn.btn-default{ width:30% !important; margin-left: 70%;}
+.action{ text-align: right; margin-left: 10%; display: flex;  flex-direction: column} 
 body {
     font-family: 'open sans';
-    overflow-x: hidden; }
-  
+    overflow-x: hidden;  }
+    .container1{ padding: 2% 2%;}
+  .card1{margin: 2%;  }
   img {
     max-width: 100%; }
-  
   .preview {
+    width: 50%;
+    height: 500px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -56,6 +61,7 @@ body {
     background: #eee;
     padding: 3em;
     line-height: 1.5em; }
+    .wrapper{ display: flex;}
   
   @media screen and (min-width: 997px) {
     .wrapper {
@@ -73,8 +79,10 @@ body {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
-  
+            flex-direction: column; 
+            margin-top : 7%;
+          }
+
   .colors {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;

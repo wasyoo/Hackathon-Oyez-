@@ -10,7 +10,7 @@ const CardItem = () => (
         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the content.</p>
         <strong>7 dt</strong>
         <a href="/test" className="float-right">
-        Réserver
+          {' Réserver'}
         </a>
       </div>
     </div>

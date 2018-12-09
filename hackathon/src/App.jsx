@@ -5,6 +5,7 @@ import Home from './Components/Home/Home';
 import UserDetails from './Components/UserDetails/UserDetails';
 import NavBar from './shared/NavBar';
 import Footer from './shared/Footer';
+import ListPlatsDetails from './Components/Plats/ListPlatsDetails';
 import PlatsDetails from './Components/Plats/PlatsDetails';
 
 const App = () => (
@@ -12,8 +13,10 @@ const App = () => (
     <Router>
       <div>
         <NavBar />
+        <br />
         <Route exact path="/" component={Home} />
         {/* <Route exact path="/user:id" render={(id) => <UserDetails id={id} />} /> */}
+        <Route exact path="/ListPlatsDetails" component={ListPlatsDetails} />
         <Route exact path="/PlatsDetails" component={PlatsDetails} />
         <Route exact path="/user" component={UserDetails} />
         <Footer />
