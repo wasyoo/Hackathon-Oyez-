@@ -8,8 +8,13 @@ import {
 } from './Components';
 
 import AutoComplete from './Components/Home/AutoCompleteSearch';
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
+
+const client = new ApolloClient({uri: 'http://localhost:4000'})
 
 const App = () => (
+  <ApolloProvider client={client}>
   <div className="App">
     <Router>
       <div>
@@ -26,6 +31,7 @@ const App = () => (
       </div>
     </Router>
   </div>
+  </ApolloProvider>
 );
 
 export default App;

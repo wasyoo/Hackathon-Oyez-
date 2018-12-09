@@ -32,6 +32,8 @@ export const Resolvers = {
     const user = await models.User.findById({ _id: id });
     user.username = input.username;
     user.email = input.email;
+    user.password=input.password;
+    user.company=input.company;
     await user.save();
     return {
       user,
