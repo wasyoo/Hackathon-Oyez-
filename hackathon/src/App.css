@@ -87,16 +87,15 @@
 .navbar .navbar-brand :hover{
   color:#fff !important;
 }
-
-.how-section h1{
-  text-align: center;
+.how-section{
+  margin-top: 40px;
 }
 
 .how-it-work{
   margin-top:30px;
   justify-content: space-around;
   align-items: center;
-  padding:20px;
+  padding:20px 50px;
 }
 
 .how-it-work img{
@@ -115,4 +114,29 @@
 .how-it-work h3{
   text-align: center;
 }
+.title-section{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 200;
+}
+.ui.search>.results{
+  left:-50px;
+}
 
+.logo{
+  width: 120px;
+  height: 60px;
+}
+
+.card-list{
+  margin: 30px 0;
+}
+
+.how-it-work p {
+  width: 200px;
+  text-align: center;
+}
+
+.how-section p{
+  font-size: 15px;
+}

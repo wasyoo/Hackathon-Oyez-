@@ -3,14 +3,14 @@ import CardItem from './CardItem';
 
 
 const CardList = () => (
-  <div className="home">
+  <div className="card-list">
+    <h1 className="title-section">Les derniers plats</h1>
     <div className="card-list row">
       <CardItem />
       <CardItem />
       <CardItem />
     </div>
   </div>
-
 );
 
 export default CardList;
