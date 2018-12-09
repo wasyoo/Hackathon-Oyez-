@@ -34,31 +34,41 @@
   position: relative;
 }
 
+.card-img{
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  margin: 10px !important;
+  margin: 10px 0 0 10px;
+  border : 1px solid #000; 
+}
+
 .card-user{
+  display: flex;
   position: absolute;
   top:0;
   left:0;
-  width: 20%;
-  height: auto;
-  border-radius: 50%;
-  margin: 10px 0 0 10px;
-  border : 1px solid #000; 
+  align-items: center;
 }
 .card-img-top{
   width: 100%; 
 }
+.card-info{
+  margin-top:20px;
 
+}
 .carousel-item {
   height: 80vh;
   width: 100vw;
 }
 
 .navbar{
-  background: rgba(0, 0, 0, 0.5) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
 }
 
 .navbar-nav .nav-link{
   color:#fff !important;
+  font-size: 20px;
 }
 
 .footer{
@@ -124,8 +134,8 @@
 }
 
 .logo{
-  width: 120px;
-  height: 60px;
+  width: 150px;
+  height: 70px;
 }
 
 .card-list{
@@ -138,5 +148,32 @@
 }
 
 .how-section p{
-  font-size: 15px;
+  font-size: 17px;
+}
+
+.stars{
+  font-size: 20px;
+}
+
+.stars-fill{
+  color: #ffd700
+}
+
+.empty-stars{
+  color: #e0e0e0
+}
+
+.user-container img{
+  height: 200px;
+  width: 200px;
+  /* border-radius: 50%; */
+  border: 5px solid white;
+}
+
+.user-card{
+  padding:20px;
+}
+
+.user-list{
+  padding:20px;
 }

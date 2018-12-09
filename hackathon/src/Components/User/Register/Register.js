@@ -1,5 +1,4 @@
 import React , { Component } from 'react';
-import './Register.css';
 
 class Register extends Component {
   render() {
@@ -52,7 +51,7 @@ class Register extends Component {
           />
         </div>
         <button type="submit" className="btn btn-primary">
-                    Submit
+                    Valider
         </button>
       </form>
     );
