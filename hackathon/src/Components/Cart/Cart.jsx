@@ -12,7 +12,7 @@ Dinars
       </h3>
       <div className="bag">
         <ul className="cartList list-group">
-          <CartItem /> 
+          <CartItem />
         </ul>
       </div>
     </div>

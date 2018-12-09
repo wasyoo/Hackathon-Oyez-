@@ -3,9 +3,6 @@ import {Mutation} from 'react-apollo';
 import FormUser from './FormUser';
 import ADD_USER from '../../../graphql/mutation/user/addUser';
 
-
-
-import './Register.css'
 class Register extends Component {
   state = {  }
   render() { 
@@ -16,5 +13,5 @@ class Register extends Component {
      );
   }
 }
- 
+
 export default Register;
