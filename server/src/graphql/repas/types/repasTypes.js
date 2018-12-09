@@ -7,7 +7,7 @@ type Repas{
   name: String!
   qtt: Int!
   description: String!
-  image: Image 
+  image: String
   price: Int!
 }
 input RepasInput{
@@ -18,10 +18,6 @@ input RepasInput{
   price: Int!
 }
 
-type Image {
-  src: String!
-  alt: String
-}
 type RepasRegistered {
   repas: Repas!
 }
