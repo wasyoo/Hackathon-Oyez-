@@ -1,7 +1,9 @@
 import { ApolloServer } from 'apollo-server';
 import dbConnect from './db/connect';
 import User from './db/models/user';
-import Repas from './db/models/repas'
+import Repas from './db/models/repas';
+import Order from './db/models/order';
+import Comment from './db/models/comment';
 import schema from './graphql/schema';
 
 dbConnect()
@@ -12,6 +14,8 @@ dbConnect()
         models: {
           User,
           Repas,
+          Order,
+          Comment,
         },
       }),
     });

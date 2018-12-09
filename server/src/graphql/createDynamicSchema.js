@@ -1,10 +1,14 @@
 import { gql } from 'apollo-server';
 import * as User from './user';
 import * as Repas from './repas';
+import * as Order from './order';
+import * as Comment from './comment';
 
 const features = [
   User,
   Repas,
+  Order,
+  Comment,
 ];
 const stringDoers = (field) => features.reduce((acc, curr) => acc.concat(curr[field] || ''), '');
 const resolversDoers = (field) => features.reduce((acc, curr) => Object.assign({},
@@ -28,4 +32,3 @@ export {
   typeDefs,
   resolvers,
 };
-

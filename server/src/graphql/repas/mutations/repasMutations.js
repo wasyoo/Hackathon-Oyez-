@@ -18,8 +18,8 @@ export const Resolvers = {
     repas.name = input.name;
     repas.qtt = input.qtt;
     repas.description = input.description;
-    repas.price=input.price;
-    repas.image=input.image;
+    repas.price = input.price;
+    repas.image = input.image;
     await repas.save();
     return {
       repas,
