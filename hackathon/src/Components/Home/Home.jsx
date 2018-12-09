@@ -3,15 +3,14 @@ import CardList from './CardList';
 import Carousel from './Carousel';
 import ModalReg from '../User/ModalReg/ModalReg';
 import HowItWork from './HowItWork';
+import TopUser from './TopUser';
 
 const Home = () => (
   <div>
     <Carousel />
     <HowItWork />
     <CardList />
-    {/* <div className="modal fade" id="register" tabindex="-1" role="dialog">
-      <Register/>
-    </div> */}
+    <TopUser />
     <ModalReg />
   </div>
 );
