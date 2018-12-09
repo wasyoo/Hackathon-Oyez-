@@ -1,6 +1,8 @@
-const plat = [];
+const plats = [{
+  id: 1, title: 'cc', details: 'gg', ingredients: 'ff',
+}];
 
-const todo = (state = plat, action) => {
+const todo = (state = { plats }, action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
@@ -11,13 +13,6 @@ const todo = (state = plat, action) => {
           img: action.img,
         },
       ];
-    case 'TOGGLE_TODO':
-      return (
-        state.map((el, index) => (index === action.id) ? {
-          text: el.text,
-          isDone: !el.isDone,
-        }:el)
-      );
     case 'REMOVE_TODO':
       return (
         state.filter((el, index) => index != action.id)

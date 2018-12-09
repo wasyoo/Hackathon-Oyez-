@@ -1,4 +1,7 @@
-import React , { Component } from 'react';
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/prefer-stateless-function */
+import React, { Component } from 'react';
 import './Register.css';
 
 class Register extends Component {
@@ -51,9 +54,8 @@ class Register extends Component {
             placeholder="veuillez entrer votre mot de passe"
           />
         </div>
-        <button type="submit" className="btn btn-primary">
-                    Submit
-        </button>
+        <button type="submit" className="btn btn-primary">  Submit
+                        </button>
       </form>
     );
   }

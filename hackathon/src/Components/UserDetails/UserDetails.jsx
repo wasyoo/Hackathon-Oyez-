@@ -2,9 +2,8 @@
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/no-string-refs */
-/* eslint-disable no-shadow */
+/* eslint-disable no-s.hadow */
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import './UserDetails.css';
 import {
   Button, Modal,
@@ -12,15 +11,16 @@ import {
 import CardList from '../Home/CardList';
 import StarsRating from './Raiting';
 
-
+const plats = [
+  {
+    id: 1, title: '', details: '', ingredients: '', img: '',
+  },
+];
 class UserDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
-      details: '',
-      ingredients: '',
-      img: '',
+      plats: plats,
     };
   }
 
@@ -48,15 +48,27 @@ class UserDetails extends Component {
     });
   }
 
-  handlesumbit=() => {
-    const { title } = this.state;
-    const { details } = this.state;
-    const { ingredients } = this.state;
-    const { img } = this.state;
-    this.props.plat(title, details, ingredients, img);
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const title = this.refs.title.value;
+    const details = this.refs.details.value;
+    const ingredients = this.refs.ingredients.value;
+    const img = this.refs.img.value;
+
     this.setState({
-      title: '', details: '', ingredients: '', img: '',
+      plats: [...plats, {
+        title,
+        details,
+        ingredients,
+        img,
+      }],
+    }, () => {
+      this.refs.title.value = '';
+      this.refs.details.value = '';
+      this.refs.ingredients.value = '';
+      this.refs.img.value = '';
     });
+   
   }
 
   render() {
@@ -116,7 +128,7 @@ class UserDetails extends Component {
             {'Les Plats Disponibles'}
           </div>
           <div className="cardlistdetails">
-            <CardList />
+            <CardList el={this.state.plats} />
 
           </div>
           <div className="center">
@@ -142,12 +154,12 @@ class UserDetails extends Component {
                 <div className="modal-body">
                   <form>
                     <div className="form-group">
-                      <label ref="title">Titre Du Plat</label>
-                      <input type="text" value={this.state.title} onChange={this.handlechange} className="form-control" id="text" placeholder="Entrer le titre du plat" />
+                      <label>Titre Du Plat</label>
+                      <input type="text" ref="title" value={this.state.title} onChange={this.handlechange} className="form-control" id="text" placeholder="Entrer le titre du plat" />
                     </div>
                     <div className="form-group">
-                      <label ref="details"> Details </label>
-                      <input type="text" value={this.state.details} onChange={this.handlechange1} className="form-control" id="details" placeholder="Details" />
+                      <label> Details </label>
+                      <input type="text" ref="details" value={this.state.details} onChange={this.handlechange1} className="form-control" id="details" placeholder="Details" />
                     </div>
                     <div className="form-group">
                       <label ref="ingredients"> Ingrédients </label>
@@ -164,7 +176,7 @@ class UserDetails extends Component {
                 </div>
                 <Modal.Actions>
                   <Button negative type="button" data-dismiss="modal">Annuler</Button>
-                  <Button positive icon="checkmark" labelPosition="right" content="Valider" onClick={this.handleSubmit} />
+                  <Button positive icon="checkmark" labelPosition="right" content="Valider" onClick={() => this.handleSubmit} />
                 </Modal.Actions>
               </div>
             </div>
@@ -175,17 +187,6 @@ class UserDetails extends Component {
     );
   }
 }
-const mapDispatchToProps = (dispatch) =>{
-  return {
-    plat: (title, details, ingredients, img) => { dispatch(
-      { type: 'ADD_TODO',
-        title, // ES6
-        details,
-        ingredients,
-        img,
-      })
-    }
-  }
-}
 
-export default connect(null, mapDispatchToProps)(UserDetails);
+
+export default UserDetails;
