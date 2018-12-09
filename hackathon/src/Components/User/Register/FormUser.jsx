@@ -1,8 +1,11 @@
-import React,{Component} from 'react';
-import PropTypes from 'prop-types'; 
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Register.css';
-// import { createHistory } from 'history/createBrowserHistory';
-// const History = createHistory({forceRefresh:true,});
+import createHistory from 'history/createBrowserHistory';
+
+const HISTORY = createHistory({
+  forceRefresh: true,
+});
 
 class FormUser extends Component {
   static propTypes = {
@@ -50,20 +53,21 @@ class FormUser extends Component {
               id,
             },
           })
-            //.then(() => History.push('/user'))
+            .then(() => HISTORY.push('/login'))
             .catch((e));
         }}
       >
-        
-        
+
+
         <div className="form-group">
           <label htmlFor="name">Nom prenom</label>
           <input
             type="text"
             className="form-control"
-            id="name"
+            name="username"
             placeholder="veuillez entrer votre nom et prénom"
-            onChange={this.handleInput} value={username}
+            onChange={this.handleInput}
+            value={username}
           />
         </div>
         <div className="form-group">
@@ -71,9 +75,10 @@ class FormUser extends Component {
           <input
             type="email"
             className="form-control"
-            id="email"
+            name="email"
             placeholder="veuillez entrer votre adresse mail"
-            onChange={this.handleInput} value={email}
+            onChange={this.handleInput}
+            value={email}
           />
         </div>
 
@@ -91,9 +96,10 @@ class FormUser extends Component {
           <input
             type="text"
             className="form-control"
-            id="company"
+            name="company"
             placeholder="veuillez entrer l'entreprise"
-            onChange={this.handleInput} value={company}
+            onChange={this.handleInput}
+            value={company}
           />
         </div>
         <div className="form-group">
@@ -101,17 +107,21 @@ class FormUser extends Component {
           <input
             type="paasword"
             className="form-control"
-            id="password"
+            name="password"
             placeholder="veuillez entrer votre mot de passe"
-            onChange={this.handleInput} value={password}
+            onChange={this.handleInput}
+            value={password}
           />
         </div>
         <button type="submit" className="btn btn-primary">
+
+
+
+
                     Submit
-        </button> 
-    </form>
+                        </button>
+      </form>
     );
   }
 }
 export default FormUser;
-
